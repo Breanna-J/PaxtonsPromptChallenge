@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+	<!-- to validate the file, go to https://validator.w3.org/ -->
+<html lang="en-us" > <!--Tells what language the page is coded in-->
+<head>
+	<meta charset="utf-8"><!-- this shows what type of encoding will be used-->
+	<meta name="author" content="Breanna Jones">
+	<meta name="description" content="I am making this page to show all of the
+	things I am learning in my web design course.">
+	<title>Paxton's Prompt Challenge</title>
+	<link rel="icon" href="PaxtonPromptChallengeLogoSmall.png" type="image/x-icon">
+		<!--this adds the icon to the top of the page-->
+	<link rel="stylesheet" href="styles.css" type="text/css">
+		<!--this links the css file to the html file-->
+	
+</head>
+<body>
+	<div class="container">
+	<!-- the following is a pop-up that appears after clicking a buttin to get instructions-->
+		<div>
+			<img class="photo" rel="image" src="PaxtonPromptChallengeLogo.png" 
+				alt="Paxton's Prompt Challenge logo">
+		</div>
+		
+		<script defer src="script.js"></script>
+		<div>	
+			<button data-modal-target="#modal" id="instructions" type="button">Instructions</button>
+			
+			<div class="modal active modal-div" id="modal">
+				<div class="modal-header modal-div">
+					<div class="title modal-div">Instructions</div>
+					<button data-close-button class="close-button">&times;</button>
+				</div>
+				<div class="modal-body modal-div">
+					<ol class="instructions-list">
+						<li class="instructions-list">Select the length of time you want your prompt challenge to last.</li>
+						<li class="instructions-list">Select how many words you want your prompt to be. <br><em class="button-hint">Hint:</em>
+						One word will be a noun, while three words will be an adjective, noun, and verb.</li>
+						<li class="instructions-list">Select your age range. <br> <em class="button-hint">Hint:</em> Younger age groups will have easier to read words than older age groups.</li>
+					</ol>		
+				</div>
+		</div>	
+		<div id="overlay"></div>
+		<form id="challengeSettings">
+		<div class="settings">
+			<label for="lengthOfTime">How long do you want your challenge to last?</label>
+			<select name="" id="lengthOfTime">
+				<option value="threeMin">3 minutes</option>
+				<option value="fiveMin">5 minutes</option>
+				<option value="twelveMin">12 minutes</option>
+				</select>
+			<label for="wordCount">Do you want a 1 word or 3 word prompt?</label>
+			<select name="" id="wordCount">
+				<option value="oneWord">1 word</option>
+				<option value="threeWords">3 words</option>
+			</select>
+			<label for="studentAge">How old are you?</label>
+			<select name="" id="studentAge">
+				<option value="fourToSix">4-6</option>
+				<option value="sevenToNine">7-9</option>
+				<option value="tenPlus">10+</option>
+			</select>
+		</div>
+			<button type="button start">Start!</button>
+		</form>
+	</div>	
+</body>
+</html>
